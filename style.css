@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+header {
+    /* background: #EEE; */
+    position: relative;
+}
+
+header h1 {
+    /* text-align: center; */
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-family: "Damion", cursive;
+    
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+nav ul {
+    padding-bottom: 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: #333;
+}
+
+
+main {
+    padding: 2.5rem;
+    max-width: 1200px
+        flex-grow 1;
+}
+
+section {
+    background: #EEE;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+    font-family: "Kaisei Decol", serif;
+}
+
+p{
+    text-align: center;
+    font-family: "Hina Mincho", serif;
+}
+
+ul{
+    text-align: center;
+    font-family: "Hina Mincho", serif;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    flex-direction: row-reverse;
+}
+
+.soundview{
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.column-img {
+    flex: 1;
+}
+
+.column-text {
+    flex: 2;
+}
+
+footer {
+    background: #333;
+    color: #FFF;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+a.pagetop {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #666;
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
