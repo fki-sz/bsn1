@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life with the Bassoon</title>
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- フォント種類 -->
+  <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Damion&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Damion&family=Kaisei+Decol&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+
+  <!-- スライドショーのCSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="function/css/slider.css">
+  <!-- メニューのCSS -->
+  <link rel="stylesheet" type="text/css" href="function/css/menu.css">
+  <!-- テキストナビゲーションのCSS -->
+  <link rel="stylesheet" type="text/css" href="function/css/textnav.css">
+  <!-- ボタンのCSS -->
+  <link rel="stylesheet" href="function/css/btn.css">
+  <!-- fadeのCSS -->
+  <link rel="stylesheet" href="function/css/fade.css">
+  <!-- 波紋ボタンのCSS -->
+  <link rel="stylesheet" href="function/css/btnripple.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+  <div id="wrap">
+    <header>
+      <div class="sticky">
+        <a href="index.html">
+          <h1>Life with the Bassoon</h1>
+        </a>
+        <nav>
+          <ul class="gnavi">
+            <li class="current"><a href="index.html">TOP</a></li><!--現在地にはcurrentクラスを付ける-->
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+            <li><a href="sound.html">SOUND</a></li>
+            <li><a href="player.html">PLAYER</a></li>
+          </ul>
+        </nav>
+      </div>
+      <header id="header">
+        <div class="main-visual">
+          <ul class="slider">
+            <li class="slider-item slider-item01"><img src="images/bsnwood-min.PNG" alt="01"></li>
+            <li class="slider-item slider-item02"><img src="images/bsnlight-min.PNG" alt="02"></li>
+            <li class="slider-item slider-item03"><img src="images/bsnhand2-min.PNG" alt="03"></li>
+            <li class="slider-item slider-item03"><img src="images/bsntop2-min.PNG" alt="04"></li>
+          </ul>
+        </div>
+      </header>
+    </header>
+
+    <div id="content-area">
+      <div class="openbtn"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+        <div id="g-nav-list">
+          <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+            <li><a href="sound.html">SOUND</a></li>
+            <li><a href="player.html">PLAYER</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="particles-js"></div>
+      <div id="wrapper">
+
+        <div id="container"> <!--ぼかしを入れるエリア-->
+
+          <!-- main-area →→ section →→ content  -->
+          <main id="main-area">
+            <section id="lead" class="layout">
+              <div class="lead-area">
+                <div class="lead-heading fade">
+                  <h2>
+                    About Bassoon
+                  </h2>
+                </div>
+                <!-- <div class="lead-heading2">
+                  <h2>
+                    Bassoon
+                  </h2>
+                </div> -->
+                <div class="lead-desc fade">
+                  <p>
+                    ファゴット、またはバスーンとも呼ばれるこの楽器は
+                    <br>
+                    木管楽器の一つです。
+                    <br>
+                    <br>
+                    幅広い音域と多様な個性を持つことから、
+                    <br>
+                    オーケストラや吹奏楽で重要な役割を担っています。
+                  </p>
+                  <br>
+                  <p>
+                    このサイトではファゴットの独特な音の魅力を紹介していきます。
+                  </p>
+                </div>
+                <div class="about-btn fade">
+                  <a href="about.html" class="btn03 pushdown"><span>このサイトについて</span></a>
+                </div>
+              </div>
+
+            </section>
+            <section id="history">
+              <div class="history-area">
+                <div class="history-heading fade">
+                  <h2>
+                    History
+                  </h2>
+                </div>
+                <div class="history-desc fade">
+                  <p>
+                    ファゴットの先祖であるドゥルシアンは16世紀頃に誕生しました。
+                    <br>
+                    19世紀頃、ドイツの軍楽隊長がファゴットの改良に取り組み
+                    <br>
+                    現在のファゴットの形になったと言われています。
+                  </p>
+                </div>
+                <div class="history-btn fade">
+                  <a href="history.html" class="btn03 pushdown"><span>ファゴットの歴史</span></a>
+                </div>
+              </div>
+            </section>
+            <section id="sound">
+              <div class="sound-area">
+                <div class="sound-heading fade">
+                  <h2>
+                    Sound
+                  </h2>
+                </div>
+                <a href="sound.html" class="btnripple2 soundbtn fade"><span></span></a>
+                <div class="sound-desc fade">
+                  <p>
+                    ファゴットの音を聴くリンクはこちらから
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section id="player">
+              <div class="player-area">
+                <div class="player-heading fade">
+                  <h2>
+                    Player
+                  </h2>
+                </div>
+                <div class="player-desc fade">
+                  <p>
+                    日本、そして世界で活躍しているファゴット奏者をご紹介します。
+                  </p>
+                </div>
+                <div class="player-btn fade">
+                  <a href="player.html" class="btn03 pushdown"><span>奏者紹介</span></a>
+                </div>
+              </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+          </main>
+
+
+        </div> <!--/container-->
+      </div><!--/wrapper-->
+    </div> <!--content-area -->
+
+    <footer class="footertext">
+      <p>&copy; Life with the Bassoon</p>
+    </footer>
+    <a href="#" class="pagetop">△</a>
+
+  </div><!-- #wrap-->
+
+
+  <!-- スライドショーJS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--自作のJS-->
+  <script src="function/js/slider.js"></script>
+
+
+  <!-- メニューJS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--自作のJS-->
+  <script src="function/js/menu.js"></script>
+
+  <!-- fade js -->
+  <script src="function/js/fade.js"></script>
+
+
+</html>

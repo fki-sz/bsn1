@@ -1,0 +1,254 @@
+/*========= ぼかしのためのCSS ===============*/
+
+.mainblur {
+    filter: blur(8px);
+}
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: rgba(230, 207, 77, 0.81);
+    /*背景を少し透過させる*/
+    /*動き*/
+    transition: all 0.3s;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999;
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*はじめは非表示*/
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#g-nav.panelactive ul {
+    /* display: block; */
+    display: flex;/*親要素をflexにして並びを変えられるようにする*/
+    flex-direction: column;/*縦並びにする*/
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+    list-style: none;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#g-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*==================================================
+　ハンバーガーメニュー　 3本線が回転して×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+    /*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: #DBB82E;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    z-index: 1000;/* z軸＝奥行き */
+}
+
+/*ボタン内側*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+}
+
+
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+    width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+    width: 20%;
+}
+
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+
+/* スマートフォン用 */
+
+@media all and (max-width:430px){
+    .openbtn{
+        top: 1rem;
+        right: 1rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .openbtn span{
+        left: 8.5px;
+        height: 2px;
+        border-radius: 1px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 9.5px;
+        width: 45%;
+    }
+    
+    .openbtn span:nth-of-type(2) {
+        top: 14.6px;
+        width: 35%;
+    }
+    
+    .openbtn span:nth-of-type(3) {
+        top: 19.7px;
+        width: 20%;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 8.5px;
+        left: 10.5px;
+        transform: translateY(6px) rotate(-135deg);
+        width: 30%;
+    }
+    
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    
+    .openbtn.active span:nth-of-type(3) {
+        top: 20.5px;
+        left: 10.5px;
+        transform: translateY(-6px) rotate(135deg);
+        width: 30%;
+    }
+}
+
+/* iPad用 */
+
+@media all and (max-width:960px){
+    .openbtn{
+        top: 1.6rem;
+        right: 1.6rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .openbtn span{
+        left: 13px;
+        height: 3px;
+        border-radius: 1px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 13.5px;
+        width: 45%;
+    }
+    
+    .openbtn span:nth-of-type(2) {
+        top: 21px;
+        width: 35%;
+    }
+    
+    .openbtn span:nth-of-type(3) {
+        top: 29px;
+        width: 20%;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 14.5px;
+        left: 16.5px;
+        transform: translateY(6px) rotate(-135deg);
+        width: 30%;
+    }
+    
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    
+    .openbtn.active span:nth-of-type(3) {
+        top: 26.5px;
+        left: 16.5px;
+        transform: translateY(-6px) rotate(135deg);
+        width: 30%;
+    }
+}
